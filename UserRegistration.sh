@@ -5,12 +5,21 @@ echo "Welcome User For Registration"
 
 echo "Enter your first name"
 read firstName
-pattern="^([a-zA-Z]{3})"
-if [[ $firstName =~ $pattern ]]
+echo "Enter your last name"
+read lastName
+patternName="^([a-zA-Z]{3})"
+if [[ $firstName =~ $patternName ]]
 then
-        echo true;
+        echo Valid First Name;
 else
-        echo false;
+        echo Invalid First Name;
 fi
+if [[ $lastName =~ $patternName ]]
+then
+        echo Valid Last Name;
+else
+        echo Invalid Last Name;
+fi
+
 
 
