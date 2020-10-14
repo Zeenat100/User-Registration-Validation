@@ -23,7 +23,16 @@ function lastName()
         pattern="^([a-zA-Z]{3})"
         checkPattern $l_name $pattern
 }
+function email()
+{
+	local e_id=$1
+	pattern="^[0-9a-zA-z]+([._+-][0-9a-zA-Z]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2,})$"
+	checkPattern $e_id $pattern
+}
 firstName $firstName
 echo "Enter your last name"
 read lastName
 lastName $lastName
+echo "Enter your email id"
+read email
+email $email
