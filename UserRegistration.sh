@@ -18,5 +18,12 @@ function checkPattern()
 	fi
 
 }
+function lastName()
+{       local l_name=$1
+        pattern="^([a-zA-Z]{3})"
+        checkPattern $l_name $pattern
+}
 firstName $firstName
-
+echo "Enter your last name"
+read lastName
+lastName $lastName
