@@ -1,25 +1,30 @@
-#!/bin/bash -x
-
 echo "Welcome User For Registration"
-#!/bin/bash -x
-
 echo "Enter your first name"
 read firstName
+function firstName()
+{	local f_name=$1
+	pattern="^([a-zA-Z]{3})"
+	checkPattern $f_name $pattern
+}
+function lastName()
+{       local l_name=$1
+        pattern="^([a-zA-Z]{3})"
+        checkPattern $l_name $pattern
+}
+
+function checkPattern()
+{
+	local value=$1
+	local pattern=$2
+	if [[ $value =~ $pattern ]]
+	then
+        	echo Valid $value;
+	else
+        	echo Invalid $value;
+	fi
+
+}
+firstName $firstName
 echo "Enter your last name"
 read lastName
-patternName="^([a-zA-Z]{3})"
-if [[ $firstName =~ $patternName ]]
-then
-        echo Valid First Name;
-else
-        echo Invalid First Name;
-fi
-if [[ $lastName =~ $patternName ]]
-then
-        echo Valid Last Name;
-else
-        echo Invalid Last Name;
-fi
-
-
-
+lastName $lastName
