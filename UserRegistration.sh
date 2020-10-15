@@ -12,7 +12,7 @@ function checkPattern()
 	local pattern=$2
 	if [[ $value =~ $pattern ]]
 	then
-        	echo Valid $value;
+        	echo Valid $value ;
 	else
         	echo Invalid $value;
 	fi
@@ -36,6 +36,14 @@ function phone()
 	checkPattern $p_id $pattern
 }
 
+function password()
+{
+        local pass=$1
+        pattern="^([a-zA-Z0-9]{8,})$"
+        checkPattern $pass $pattern
+}
+
+
 firstName $firstName
 echo "Enter your last name"
 read lastName
@@ -46,3 +54,6 @@ email $email
 echo "Enter your Phone Number"
 read phone
 phone $phone
+echo "Enter your Password"
+read pass
+password $pass
