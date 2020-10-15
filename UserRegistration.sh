@@ -38,9 +38,13 @@ function phone()
 
 function password()
 {
-        local pass=$1
-        pattern="^([a-zA-Z0-9]{8,})$"
-        checkPattern $pass $pattern
+        local password=$1
+        if [[ ${#password} -ge 8 && "$password" == *[[:upper:]]* ]]
+	then
+		echo "Password Accepted"
+	else
+		echo "Password Not Accepted"
+	fi
 }
 
 
