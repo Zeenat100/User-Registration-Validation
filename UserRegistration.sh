@@ -39,7 +39,7 @@ function phone()
 function password()
 {
         local password=$1
-        if [[ ${#password} -ge 8 && "$password" == *[[:upper:]]* ]]
+        if [[ ${#password} -ge 8 && "$password" == *[[:upper:]]*  && "$password" == *[0-9]* ]]
 	then
 		echo "Password Accepted"
 	else
