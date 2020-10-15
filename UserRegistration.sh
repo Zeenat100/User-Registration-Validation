@@ -32,8 +32,7 @@ function email()
 function phone()
 {
         local p_id=$1
-        pattern="^([0-9]{2})+([-])+([0-9]{10})"
-        #pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{10}$"
+        pattern="^([0-9]{2})+([/ ])+([0-9]{10})"
 	checkPattern $p_id $pattern
 }
 
