@@ -1,6 +1,6 @@
 echo "Welcome User For Registration"
-#echo "Enter your first name"
-#read firstName
+echo "Enter your first name"
+read firstName
 function firstName()
 {	local f_name=$1
 	pattern="^([a-zA-Z]{3})"
@@ -37,13 +37,13 @@ function phone()
 	checkPattern $p_id $pattern
 }
 
-#firstName $firstName
-#echo "Enter your last name"
-#read lastName
-#lastName $lastName
-#echo "Enter your email id"
-#read email
-#email $email
+firstName $firstName
+echo "Enter your last name"
+read lastName
+lastName $lastName
+echo "Enter your email id"
+read email
+email $email
 echo "Enter your Phone Number"
 read phone
 phone $phone
