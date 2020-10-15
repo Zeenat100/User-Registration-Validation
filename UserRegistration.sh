@@ -61,3 +61,7 @@ phone $phone
 echo "Enter your Password"
 read pass
 password $pass
+echo "Enter sample emails"
+read s_email
+email $s_email
+echo "Email verification for sample emails is working fine"
